@@ -1,0 +1,38 @@
+<!--Thomas VG-->
+<!--Roll No : 58-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h2{
+                font-size: 30px;
+                color: green;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Change colour of text</h2><br><br>
+            <p id="para1">Thomas VG</p>
+            <button id="changeColor" onclick="change()">Change Text colour</button>
+
+            <script>
+                function change(){
+                    var textElement = document.getElementById('para1');
+                    textElement.style.color = getRandomColor();
+                }
+
+                function getRandomColor(){
+                    var letters = '0123456789ABCDEF';
+                    var color = '#';
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+            </script>
+        </center>
+    </body>
+</html>

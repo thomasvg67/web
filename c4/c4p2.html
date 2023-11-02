@@ -1,0 +1,56 @@
+<!--Thomas VG-->
+<!--Roll No:58-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+h2 {
+font-size : 30px;
+color : green;
+font-weight : bold;
+text-decoration : underline;
+}
+</style>
+</head>
+
+<body>
+<center>
+
+<h2>Addition of two numbers</h2>
+<br>
+
+<br>
+
+<label>Enter the value of first number :
+
+<input type="text" id="fn" ></label>
+
+<br>
+<br>
+
+<label>Enter value of second number :
+
+<input type="text" id="sn" ></label>
+
+<br><br>
+<button onclick="addition()">Sum</button>
+<p id="result"></p>
+
+<script>
+function addition() {
+var x = parseInt(document.getElementById("fn").value);
+var y = parseInt(document.getElementById("sn").value);
+var sum = x + y;
+document.getElementById("result").innerHTML = sum;
+}
+
+</script>
+
+</center>
+
+</body>
+</html>

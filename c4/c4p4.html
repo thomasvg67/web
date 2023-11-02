@@ -1,0 +1,38 @@
+<!--Thomas VG-->
+<!--Roll No:58-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h2{
+                font-size: 30px;
+                color: green;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2>Check if Positive or Negative</h2><br><br>
+            <label>Enter any number : <input type="number" id="num" > </label>
+            <button onclick="check()">Check</button>
+            <p id="result"></p>
+
+            <script>
+                function check(){
+                    var num = parseFloat(document.getElementById('num').value);
+
+                    if(isNaN(num)){
+                        document.getElementById('result').textContent = "Please enter a valid number";
+                    }
+                    else{
+                        var resultText = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+                        document.getElementById('result').textContent = num + " is a " + resultText + " number.";
+                    }
+                }
+            </script>
+        </center>
+    </body>
+</html>
