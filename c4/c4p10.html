@@ -1,0 +1,46 @@
+<!--Thomas VG-->
+<!--Roll No:58-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change bg color</title>
+    <style>
+        div {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* position: absolute; */
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+                font-size: 30px;
+                color: green;
+                font-weight: bold;
+                text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Change the color of background by just clicking on the button</h2>
+        <button id="change">Change color</button>
+    </div>
+
+    <script>
+        var btn = document.getElementById("change")
+        let allChar = "0123456789ABCDEF"
+        btn.addEventListener("click", change)
+        function change(){
+
+            let randCol = ''
+            for (let i = 0; i < 6; i++) {
+                randCol += allChar[Math.floor(Math.random()*16)]
+            }
+            document.body.style.background = "#" + randCol
+        }
+    </script>
+</body>
+</html>
