@@ -1,0 +1,69 @@
+<!--Thomas VG-->
+<!--Roll No : 58-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #heading{
+                font-size: 30px;
+                color: green;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            #n{
+                font-size: 30px;
+                color: green;
+                font-weight: bold;
+            }
+            #d{
+                font-size: 30px;
+                color: green;s
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h2 id="heading">Calculate age from Date Of Birth</h2>
+            <label>Enter your name :<input type="text" id="name"></label><br><br>
+            <label>Enter date of birth : <input type="date" id="date"></label><br><br>
+            <button onclick="print()">Calculate age</button>
+            <h3 id="n"></h3>
+            <h3 id="d"></h3>
+            <script>
+                function print(){
+                    name();
+                    age();
+                }
+                function name(){
+                    var x = document.getElementById("name").value;
+                    document.getElementById("n").innerHTML = x;
+                }
+                function age(){
+                    	var userinput = document.getElementById("date").value;  
+    			var dob = new Date(userinput);  
+   			if(userinput==null || userinput=='') {  
+      			document.getElementById("message").innerHTML = "**Choose a date please!";    
+      			return false;   
+    			} else {  
+      
+    
+    			var month_diff = Date.now() - dob.getTime();  
+      
+    			var age_dt = new Date(month_diff);   
+      
+         
+    			var year = age_dt.getUTCFullYear();  
+    
+    			var age = Math.abs(year - 1970);  
+      
+    
+    			return document.getElementById("d").innerHTML =    
+             			"Age is: " + age + " years. ";  
+    			}  
+                }
+		
+            </script>
+        </center>
+    </body>
+</html>
